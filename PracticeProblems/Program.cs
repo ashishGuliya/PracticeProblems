@@ -10,7 +10,14 @@ namespace PracticeProblems
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(RainWaterCollection(new[] { 0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1 }));
+            //Console.WriteLine(RainWaterCollection(new[] { 0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1 }));
+
+            var node =new Node(12);
+            node.Left = new Node(10);
+            node.Right = new Node(30);
+            node.Right.Left = new Node(25);
+            node.Right.Right = new Node(67);
+            new TreeProblems().PrintLeftView(node);
             Console.ReadKey();
         }
 
