@@ -12,12 +12,21 @@ namespace PracticeProblems
         {
             //Console.WriteLine(RainWaterCollection(new[] { 0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1 }));
 
-            var node =new Node(12);
-            node.Left = new Node(10);
-            node.Right = new Node(30);
-            node.Right.Left = new Node(25);
-            node.Right.Right = new Node(67);
-            new TreeProblems().PrintLeftView(node);
+
+            //var bst = new BST();
+            //bst.Add(new []{20,8, 22,4, 12, 10, 44});
+            //bst.DoInorder(x => Console.Write(" " + x.Data+":"+x.Rank));
+            //Console.WriteLine(bst.KthSmallestElemt(5));
+
+            var trie = new Trie();
+
+            trie.InsertKeys(new []{
+                "the", "a", "there", "answer", "any",
+                     "by", "bye", "their"});
+            foreach (var s in trie.Suggestions("th").ToArray())
+            {
+                Console.WriteLine(s);
+            }
             Console.ReadKey();
         }
 
